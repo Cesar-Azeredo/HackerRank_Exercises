@@ -1,1 +1,16 @@
+n = int(input())
+b = bin(n)[2:]
+
+maximo = 0
+atual = 0
+
+for i in b:
+    if i == "1":
+        atual += 1
+        if atual > maximo:
+            maximo = atual
+    else:
+        atual = 0
+
+print(maximo)
 
