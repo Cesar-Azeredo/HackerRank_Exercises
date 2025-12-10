@@ -1,1 +1,18 @@
+arr = []
+
+for _ in range(6):
+    arr.append(list(map(int, input().split())))
+
+maior = -999999
+
+for i in range(4):
+    for j in range(4):
+        soma = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+        soma += arr[i+1][j+1]
+        soma += arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+
+        if soma > maior:
+            maior = soma
+
+print(maior)
 
