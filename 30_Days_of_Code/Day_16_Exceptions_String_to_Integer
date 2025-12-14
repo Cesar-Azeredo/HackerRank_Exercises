@@ -6,11 +6,9 @@ import random
 import re
 import sys
 
+S = input().strip()
 
-
-if __name__ == '__main__':
-    S = input()
-    try:
-        print(int(S))
-    except:
-        print("Bad String")
+try:
+    print(int(S))
+except ValueError:
+    print("Bad String")
